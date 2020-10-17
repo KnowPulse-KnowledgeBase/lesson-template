@@ -3,18 +3,15 @@ layout: lesson
 root: .
 ---
 
-{% comment %}
-Add one sentence to the next paragraph indicating the purpose of this lesson.
-{% endcomment %}
-
 The KnowPulse KnowledgeBase focuses on short question-based lessons to help researchers get their work done.
 
-{% comment %}
-Describe the key points a researcher will learn below.
-{% endcomment %}
-In this lesson, you will learn:
+- **Purpose:** {{ site.short-purpose }}
+- **Who:** {{ site.who }}
+- **Maintainer(s):** {{ site.maintainers }}
 
- -
+{{ site.why }}
+
+{{ site.learn }}
 
 > ## Getting Started
 >
@@ -31,10 +28,8 @@ In this lesson, you will learn:
 > get access to the required software and data for this workshop.
 {: .prereq}
 
-{% comment %}
-Describe the example data used for this lesson in the block quote below.
-{% endcomment %}
+
 > ## Data
 >
->
+> {{ site.data-description }}
 {: .prereq}
