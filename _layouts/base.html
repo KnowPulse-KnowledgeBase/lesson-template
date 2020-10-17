@@ -16,6 +16,7 @@
     <link rel="stylesheet" type="text/css" href="{{ relative_root_path }}/assets/css/bootstrap-theme.css" />
     <link rel="stylesheet" type="text/css" href="{{ relative_root_path }}/assets/css/lesson.css" />
     <link rel="stylesheet" type="text/css" href="{{ relative_root_path }}/assets/css/syntax.css" />
+    <link rel="stylesheet" type="text/css" href="{{ relative_root_path }}/assets/css/main.css" />
     <link rel="license" href="#license-info" />
 
     {% include favicons.html %}
@@ -29,22 +30,27 @@
 
   <title>
   {% if page.title %}{{ page.title }}{% endif %}{% if page.title and site.title %} &ndash; {% endif %}{% if site.title %}{{ site.title }}{% endif %}
-  </title>  
+  </title>
 
   </head>
   <body>
+
+    <header class="site-header" role="banner">
+
+      <div class="wrapper">
+        <a class="site-title" rel="author" href="{{ "/" | relative_url }}">
+          KnowPulse KnowledgeBase
+        </a>
+      </div>
+    </header>
 
     {% include life_cycle.html %}
 
     <div class="container">
       {% include navbar.html %}
-{{ content }}
-      {% if site.kind == "workshop" %}
-      {% include workshop_footer.html %}
-      {% else %}
-      {% include lesson_footer.html %}
-      {% endif %}
+      {{ content }}
     </div>
+    {% include lesson_footer.html %}
     {% include javascript.html %}
   </body>
 </html>
