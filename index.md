@@ -36,10 +36,10 @@ The KnowPulse KnowledgeBase focuses on short question-based lessons to help rese
 
 {{ page.why }}
 
-Some of the things you will learn include:
+<strong>Some of the things you will learn include:</strong>
 <ul>
 	{% for item in page.learn %}
-	<li>{{ item|markdownify }}</li>
+	<li style="font-weight:bold">{{ item|markdownify }}</li>
 	{% endfor %}
 </ul>
 
