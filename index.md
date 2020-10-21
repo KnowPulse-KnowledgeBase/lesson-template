@@ -20,10 +20,10 @@ maintainers: "Lacey-Anne Sanderson, Ruobin Liu"
 why: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent lacinia orci risus. Quisque condimentum nunc posuere, rutrum nunc eu, cursus enim. Nam sit amet turpis sit amet erat pulvinar consequat eget ac erat. Aliquam erat volutpat. Aenean in bibendum nibh. Proin iaculis dictum augue nec faucibus. Integer et arcu tortor. Donec at tristique eros. Integer consequat aliquet mauris, vitae imperdiet orci iaculis sit amet. Cras sit amet mollis lacus. Sed ac auctor mi, sit amet laoreet tellus. Vivamus vehicula congue velit. Cras vulputate est nec velit pretium condimentum. Vivamus eu leo sed est ullamcorper tincidunt at non dolor. Duis vestibulum pellentesque felis, at aliquam risus condimentum at."
 
 # A short list of items researchers will learn in this lesson.
-learn: "
-- Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-- Quisque condimentum nunc posuere, rutrum nunc eu, cursus enim.
-- Duis vestibulum pellentesque felis, at aliquam risus condimentum at."
+learn:
+- "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+- "Quisque condimentum nunc posuere, rutrum nunc eu, cursus enim."
+- "Duis vestibulum pellentesque felis, at aliquam risus condimentum at."
 
 data-description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent lacinia orci risus. Quisque condimentum nunc posuere, rutrum nunc eu, cursus enim. Nam sit amet turpis sit amet erat pulvinar consequat eget ac erat. Aliquam erat volutpat. Aenean in bibendum nibh. Proin iaculis dictum augue nec faucibus. Integer et arcu tortor. Donec at tristique eros. Integer consequat aliquet mauris, vitae imperdiet orci iaculis sit amet. Cras sit amet mollis lacus. Sed ac auctor mi, sit amet laoreet tellus. Vivamus vehicula congue velit. Cras vulputate est nec velit pretium condimentum. Vivamus eu leo sed est ullamcorper tincidunt at non dolor. Duis vestibulum pellentesque felis, at aliquam risus condimentum at."
 ---
@@ -37,8 +37,11 @@ The KnowPulse KnowledgeBase focuses on short question-based lessons to help rese
 {{ page.why }}
 
 Some of the things you will learn include:
-
-{{ page.learn }}
+<ul>
+	{% for item in page.learn %}
+	<li>{{ item|markdownify }}</li>
+	{% endfor %}
+</ul>
 
 > ## Getting Started
 >
